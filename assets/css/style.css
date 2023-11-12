@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body{
+    text-align: center;
+    font-family: roboto;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+h1{
+    font-size: 300%;
+    text-shadow: 1px 1px 3px white;
+}
+
+h2{
+    font-size: 200%;
+}
+.content div{
+    padding: 2%;
+    /* display: flex;
+    justify-content: center; */
+    gap: 2%;
+}
+
+.content button{
+    font-size: 150%;
+    padding: 0.8%;
+    width: 20%;
+    background-color: black;
+    color: white;
+
+
+}
+
+.content div p{
+    font-size: 200%;
+    text-shadow: 1px 1px 3px black;
+}
+
+img{
+    border-top: 15px ridge #ffd700;
+border-right: 15px ridge #ffd700;
+border-bottom: 15px ridge #ffd700;
+border-left: 15px ridge #ffd700;
+}
+
+#output{
+    font-size: 200%;
+    text-shadow: 1px 1px 3px white;
+}
+
+@media screen and (max-width: 430px) {
+    img{
+        width: 95%;
+    }
+
+    .content button{
+        width: 70%;
+        font-size: 200%;
+        height: 10%;
+        padding-block: 10px;
+    }
+    .content div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width : 768px) and (max-width: 1024px) { 
+    .content button{
+        width: 35%;
+        font-size: 200%;
+        margin-right: 20px;
+        margin-top: 20px;
+    }
+    img{
+        margin-top: 30px;
+    }
+}
