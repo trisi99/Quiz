@@ -117,6 +117,11 @@ buttons.forEach((elt)=>{
                 // counterOutput.innerHTML = `You have answered ${counter} of ${data.length} questions correctly.`
                 
             }
+            for(let f=0;f < elt.parentElement.children.length; f++){
+              if(elt.parentElement.children[f].textContent == data[i].answer.toString()){
+                elt.parentElement.children[f].style.backgroundColor = "green"
+              }
+            }
         }
         if(elt.style.backgroundColor == "red"){
           const p = document.createElement('p')
@@ -126,8 +131,8 @@ buttons.forEach((elt)=>{
             
         }
         for(let j=0;j < elt.parentElement.children.length; j++) {
-          
-            elt.parentElement.children[j].disabled = true
+              elt.parentElement.children[j].disabled = true
+
           }
           for(let t = 0; t < lastKid.children.length; t++){
             if(lastKid.children[t]=== target){
